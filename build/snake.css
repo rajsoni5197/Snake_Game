@@ -1,0 +1,105 @@
+
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.scoreBoard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0; /* Optional background color */
+    /* padding: 10px; Optional padding */
+    height : 30px;
+    width: 90%;
+    margin: auto;
+}
+
+#score, #highestScore {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#score > div:nth-child(2),#highestScore > div:nth-child(2){
+    background-color: black;
+    margin: 2vw ;
+    color: white;
+    
+}
+
+#canvas1 {
+    image-rendering: -moz-crisp-edges;
+    image-rendering:-crisp-edges;
+    image-rendering: pixelated;
+    image-rendering: -webkit-crisp-edges;
+    background-color: black;
+    margin-top: 10px; /* Optional margin to provide space between scoreBoard and canvas */
+    width: 90vw; /* Make the canvas take up 100% of available width */
+    height: 90vh;
+    transform: none;
+}
+
+
+/* Add some styling for the control buttons */
+/* Add some styling for the control buttons */
+
+.direction-buttons {
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    display: none;
+}
+
+.direction-buttons button {
+    width: 90px;
+    height: 90px;
+    font-size: 18px;
+    border: 2px solid #333;
+    border-radius: 8px;
+    background-color: #ddd;
+    cursor: pointer;
+    margin: 5px;
+}
+
+#up{
+    margin-top: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+#down{
+    margin-top: 20px;
+}
+#left {
+    margin-left: auto;
+
+    margin-right: 70px; /* Adjust the margin-right value as needed */
+}
+
+#right {
+    margin-right: auto;
+
+    margin-left:70px; /* Adjust the margin-left value as needed */
+}
+@media only screen and (max-width: 600px) {
+    #canvas1 {
+        width: 100vw; /* Adjust the width for smaller screens */
+        height: 30vh; /* Adjust the height for smaller screens */
+    }
+    .direction-buttons {
+        display: block;
+    }
+}
+/* Media Query for screens between 600 and 1200 pixels wide */
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+    #canvas1 {
+        width: 80vw; /* Adjust the width for medium-sized screens */
+        height: 80vh; /* Adjust the height for medium-sized screens */
+    }
+    .direction-buttons {
+        display: none;
+    }
+}
